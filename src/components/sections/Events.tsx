@@ -1,26 +1,21 @@
+"use client";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import Container from "@/components/common/Container";
 
 export default function Events() {
+  const router = useRouter();
   return (
     <section id="events" className="py-10 md:py-20 bg-[#FFEEF0] overflow-hidden">
       <Container>
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-
-
-          <div>
-            <SectionHeader
-              label="Events"
-              title="Discover and Explore Upcoming Events Near You"
-              subtitle="Explore an extensive variety of events designed to inspire and engage innovators of all kinds, offering unique opportunities to learn, connect, and grow in your creative journey."
-            />
-
-            <Link href = "/events">
-              <Button className="mt-6 bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-xl">
-                VIEW ALL EVENTS
-              </Button>
-            </Link>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
+          
+          {/* Left Content Column */}
+          {/* Updated: Added items-start and text-left for mobile */}
+          <div className="flex flex-col items-start lg:items-start text-left lg:text-left order-1">
+            {/* Label */}
+          <div className="inline-block border border-black rounded-full px-6 py-2 bg-white text-sm md:text-base font-medium mb-6 md:mb-10">
+            EVENTS
           </div>
             {/* Responsive Heading Image */}
             <div className="mb-4 md:mb-8">
@@ -48,7 +43,7 @@ export default function Events() {
             </p>
 
             {/* Desktop View Button (Hidden on Mobile) */}
-            <button className="hidden lg:block hover:scale-105 active:scale-95 transition-transform">
+            <button onClick={() => router.push('/events')} className="hidden cursor-pointer lg:block hover:scale-105 active:scale-95 transition-transform">
               <Image 
                 src="/events-button.png" 
                 alt="View All Events" 

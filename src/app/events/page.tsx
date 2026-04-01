@@ -1,5 +1,6 @@
 import EventCard from "@/components/ui/eventcard";
 import ArenaPageFooter from "@/components/layout/ArenaPageFooter";
+import Footer from "@/components/layout/Footer";
 
 export default function EventsPage() {
 
@@ -13,7 +14,8 @@ export default function EventsPage() {
         ];
 
   return (
-    <main className="flex flex-col items-center pt-20 bg-white min-h-screen px-4">
+    <>
+      <main className="flex flex-col mb-20 items-center pt-20 bg-white min-h-screen px-4">
       <h1 className="
         font-gliker
         font-semibold
@@ -46,8 +48,10 @@ export default function EventsPage() {
             <EventCard key={index} event={arena} />
         ))}
         </div>
-
-        <ArenaPageFooter ></ArenaPageFooter>
+{/* <ArenaPageFooter ></ArenaPageFooter> */}
     </main>
+    <Footer></Footer>
+    </>
+  
   );
 }
