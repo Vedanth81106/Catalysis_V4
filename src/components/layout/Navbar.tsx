@@ -26,12 +26,10 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
 
-        {/* LOGO */}
         <div className="cursor-pointer" onClick={() => handleScroll("hero")}>
           <Image src="/catalysis.png" alt="Catalysis" width={110} height={45} />
         </div>
 
-        {/* DESKTOP NAV */}
         <div className="hidden md:flex gap-8 font-medium">
           {navItems.map((item) => (
             <button
@@ -44,7 +42,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* DESKTOP BUTTON */}
         <div
           className="hidden md:block cursor-pointer"
           onClick={() => handleScroll("cta")}
@@ -52,7 +49,6 @@ export default function Navbar() {
           <Image src="/nav-register-now.png" alt="Register" width={110} height={50} />
         </div>
 
-        {/* HAMBURGER */}
         <div
           className="md:hidden flex flex-col justify-center items-center w-8 h-8 cursor-pointer z-[60]"
           onClick={() => setIsOpen(!isOpen)}
@@ -75,7 +71,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 🔥 MOBILE OVERLAY MENU */}
       <div
         className={`md:hidden fixed inset-0 bg-[#FFEEF0]/95 backdrop-blur-md flex flex-col items-center justify-center gap-8 transition-all duration-300 z-50 ${
           isOpen
@@ -83,7 +78,7 @@ export default function Navbar() {
             : "opacity-0 pointer-events-none"
         }`}
       >
-        {/* NAV ITEMS */}
+
         <div className="flex flex-col items-center gap-8">
           {navItems.map((item) => (
             <button
@@ -103,7 +98,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA BUTTON */}
         <button
           onClick={() => handleScroll("cta")}
           className="

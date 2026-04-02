@@ -12,17 +12,14 @@ export default function Events() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
 
-          {/* LEFT CONTENT */}
           <div className="flex flex-col items-start text-left">
 
-            {/* EVENTS pill */}
             <div className="mb-4 md:mb-6">
               <div className="inline-block border border-black rounded-full px-5 py-1.5 md:px-6 md:py-2 bg-white text-xs md:text-sm font-medium tracking-wide">
                 EVENTS
               </div>
             </div>
 
-            {/* HEADING (replacing image) */}
               <h1
                 className="
                 mb-6 md:mb-10
@@ -37,12 +34,11 @@ export default function Events() {
               >
                 Discover and Explore Upcoming Events Near You
               </h1>
-            {/* DESCRIPTION */}
+
             <p className="font-nunito text-[#3b0a1e] text-[14px] md:text-[18px] leading-relaxed max-w-xl -mb-36 md:mb-10">
               Explore an extensive variety of events designed to inspire and engage innovators of all kinds, offering unique opportunities to learn, connect, and grow in your creative journey.
             </p>
 
-            {/* BUTTON (replacing image) */}
             <button
               onClick={() => router.push("/events")}
               className="
@@ -66,7 +62,6 @@ export default function Events() {
             </button>
           </div>
 
-          {/* RIGHT CARDS */}
           <div className="flex flex-row gap-4 md:gap-10 justify-center items-center mt-8 lg:mt-0">
             <div className="relative mt-20 hover:-translate-y-4 transition-transform duration-300">
               <CharizardCard title="PITCH ARENA" />
@@ -77,7 +72,6 @@ export default function Events() {
             </div>
           </div>
 
-          {/* MOBILE BUTTON */}
           <div className="lg:hidden flex justify-center w-full mt-8">
             <button
               onClick={() => router.push("/events")}
@@ -99,7 +93,6 @@ export default function Events() {
               VIEW ALL EVENTS
             </button>
           </div>
-
         </div>
       </Container>
     </section>

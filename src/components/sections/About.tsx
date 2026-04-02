@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Container from "@/components/common/Container";
 
-// ── Types ─────────────────────────────────────────────────────────────────────
-
 interface BadgeProps {
   label: string;
   content: string;
@@ -43,13 +41,12 @@ function Badge({
       "
       style={{
         fontFamily: "inherit",
-        /* Padding scales with viewport: tight on mobile, roomy on desktop */
         padding: "clamp(3px, 0.6vw, 6px) clamp(8px, 2vw, 18px) clamp(3px, 0.6vw, 6px) clamp(3px, 0.6vw, 6px)",
         maxWidth: "clamp(140px, 28vw, 290px)",
         minWidth: "clamp(100px, 16vw, 150px)",
       }}
     >
-      {/* Circle icon */}
+
       <div
         className="
           relative flex-shrink-0
@@ -59,7 +56,6 @@ function Badge({
           aspect-square
         "
         style={{
-          /* Circle shrinks on small screens, grows on large */
           width: "clamp(28px, 5.5vw, 36px)",
           height: "clamp(28px, 5.5vw, 36px)",
           background: `radial-gradient(circle at 38% 38%, ${primaryColor}dd, ${primaryColor})`,
@@ -68,7 +64,7 @@ function Badge({
           flexShrink: 0,
         }}
       >
-        {/* Inner decorative ring */}
+
         <div
           className="absolute inset-[3px] rounded-full border border-black/15"
           style={{
@@ -76,7 +72,6 @@ function Badge({
           }}
         />
 
-        {/* Icon image */}
         <div className="relative z-10 w-[52%] h-[52%]">
           <Image
             src={icon}
@@ -88,7 +83,6 @@ function Badge({
         </div>
       </div>
 
-      {/* Text */}
       <div
         className="flex flex-col justify-center leading-tight min-w-0"
         style={{
@@ -115,7 +109,6 @@ function Badge({
     </div>
   );
 }
-// ── Badge data ────────────────────────────────────────────────────────────────
 
 const MOBILE_BADGES: BadgeData[] = [
   { top: "5%",  left: "48%", label: "Pitch",        content: "STRATEGY TYPE", icon: "/about2/pitch.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555" },
@@ -145,12 +138,11 @@ const LINES: LineData[] = [
   { src: "/about/Vector-5.png", top: "60%", left: "-35%", widthRatio: 0.61 },
 ];
 
-// ── Sub-components ────────────────────────────────────────────────────────────
 
 function AboutMobile() {
   return (
     <div className="relative w-full h-[320px] flex items-center justify-center">
-      {/* Central Pokeball */}
+
       <div className="absolute -mt-22 z-20">
         <Image
           src="/hero/Pokeball.png"
@@ -188,14 +180,13 @@ function AboutMobile() {
 function AboutLeft() {
   return (
     <div className="flex flex-col items-start text-left z-10 px-4 md:px-0">
-      {/* ABOUT US pill */}
+
       <div className="mb-4 md:mb-6">
         <div className="inline-block border border-black rounded-full px-5 py-1.5 md:px-6 md:py-2 bg-white text-xs md:text-sm font-medium tracking-wide">
           ABOUT US
         </div>
       </div>
 
-      {/* Heading */}
       <div className="mb-6 md:mb-10">
         <h1
           className="
@@ -211,7 +202,6 @@ function AboutLeft() {
         </h1>
       </div>
 
-      {/* Paragraphs */}
       <div className="space-y-4 md:space-y-6 text-[#3b0a1e] font-nunito text-[14px] md:text-[18px] leading-relaxed max-w-xl">
         <p>
           Catalysis is not just an event, it&apos;s a platform designed to spark
@@ -234,7 +224,7 @@ function AboutRight() {
 
   return (
     <div className="relative w-full" style={{ paddingTop: "120%" }}>
-      {/* Decorative lines */}
+
       <div className="absolute inset-0 z-10 pointer-events-none">
         {LINES.map((line, i) => (
           <div
@@ -257,7 +247,6 @@ function AboutRight() {
         ))}
       </div>
 
-      {/* Badges */}
       {BADGES.map((badge, i) => (
         <div
           key={i}
@@ -285,7 +274,6 @@ function AboutRight() {
   );
 }
 
-// ── Page section ──────────────────────────────────────────────────────────────
 
 export default function About() {
   return (
@@ -294,13 +282,12 @@ export default function About() {
       className="relative w-full bg-[#FFEEF0] py-2 md:py-1 overflow-hidden"
     >
       <Container>
-        {/* Mobile */}
+
         <div className="block md:hidden space-y-10">
           <AboutLeft />
           <AboutMobile />
         </div>
 
-        {/* Desktop */}
         <div className="hidden md:grid grid-cols-3 gap-8 items-center">
           <div className="col-span-1">
             <AboutLeft />

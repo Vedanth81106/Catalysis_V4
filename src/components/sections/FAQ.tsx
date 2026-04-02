@@ -1,7 +1,7 @@
 "use client";
 
 import Container from "@/components/common/Container";
-import Image from "next/image";
+// import Image from "next/image";
 import { useState } from "react";
 
 const qna = [
