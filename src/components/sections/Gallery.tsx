@@ -77,7 +77,7 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-28 bg-[#FFEEF0]">
       <Container>
-        <div className="rounded-[3rem] p-10 md:p-20 border-2 border-black bg-[#FAF7ED] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden">
+        <div className="rounded-[3rem] p-7 md:p-20 border-2 border-black bg-[#FAF7ED] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden">
 
           <div className="flex flex-col items-center text-center mb-16">
             
@@ -105,12 +105,12 @@ export default function Gallery() {
           <div className="md:hidden w-full">
             <Swiper
               modules={[Autoplay, Pagination]}
-              spaceBetween={20}
+              spaceBetween={10}
               slidesPerView={1.2}
               centeredSlides={true}
               loop={true}
               autoplay={{ delay: 3000 }}
-              pagination={{ clickable: true }}
+              // pagination={{ clickable: true }}
               className="pb-12"
             >
               {images.map((src, i) => (

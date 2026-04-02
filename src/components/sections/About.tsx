@@ -118,12 +118,12 @@ function Badge({
 // ── Badge data ────────────────────────────────────────────────────────────────
 
 const MOBILE_BADGES: BadgeData[] = [
-  { top: "5%",  left: "46%", label: "Pitch",        content: "STRATEGY TYPE", icon: "/about2/pitch.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555" },
-  { top: "20%", left: "10%", label: "DSA",           content: "PSYCHIC TYPE",  icon: "/about2/dsa.png",          primaryColor: "#4A9CC4", secondaryColor: "#2A6F9A" },
+  { top: "5%",  left: "48%", label: "Pitch",        content: "STRATEGY TYPE", icon: "/about2/pitch.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555" },
+  { top: "20%", left: "14%", label: "DSA",           content: "PSYCHIC TYPE",  icon: "/about2/dsa.png",          primaryColor: "#4A9CC4", secondaryColor: "#2A6F9A" },
   { top: "20%", left: "82%", label: "Valorant",      content: "BATTLE TYPE",   icon: "/about2/valorent.png",     primaryColor: "#5BBF6A", secondaryColor: "#2E8A3E" },
-  { top: "50%", left: "10%", label: "Technoseek",    content: "ELECTRIC TYPE", icon: "/about2/technoseek.png",   primaryColor: "#A8CC55", secondaryColor: "#72981E" },
+  { top: "50%", left: "14%", label: "Technoseek",    content: "ELECTRIC TYPE", icon: "/about2/technoseek.png",   primaryColor: "#A8CC55", secondaryColor: "#72981E" },
   { top: "50%", left: "82%", label: "Typemaster",    content: "SPEED TYPE",    icon: "/about2/typemaster.png",   primaryColor: "#B86ED4", secondaryColor: "#8A3BAF" },
-  { top: "68%", left: "25%", label: "Coding Relay",  content: "TEAM TYPE",     icon: "/about2/coding-relay.png", primaryColor: "#F5943A", secondaryColor: "#C8620E" },
+  { top: "68%", left: "27%", label: "Coding Relay",  content: "TEAM TYPE",     icon: "/about2/coding-relay.png", primaryColor: "#F5943A", secondaryColor: "#C8620E" },
   { top: "68%", left: "68%", label: "UI/UX Design",  content: "CREATIVE TYPE", icon: "/about2/ui-ux.png",        primaryColor: "#F28B8B", secondaryColor: "#E05555" },
 ];
 

@@ -158,3 +158,25 @@
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes fingerTap {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(12px);
+  }
+  40% {
+    transform: translateY(16px) scaleY(0.95);
+  }
+  55% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.finger-tap {
+  animation: fingerTap 2.2s ease-in-out infinite;
+}

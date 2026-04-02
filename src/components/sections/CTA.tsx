@@ -22,13 +22,9 @@ export default function CTA() {
 
           <div className="mb-6">
             <div className="block md:hidden">
-              <Image
-                src="/last/heading-phone.png"
-                alt="Ready to Be Part of Catalysis?"
-                width={400}
-                height={200}
-                className="max-w-full h-auto"
-              />
+              <h1 className="font-gliker font-semibold text-[44px] leading-[1.08] tracking-[-0.005em] text-white max-w-[650px]">
+                Ready to Be Part of Catalysis?
+              </h1>
             </div>
             <div className="hidden md:block">
               <h1 className="font-gliker font-semibold text-[34px] sm:text-[42px] md:text-[62px] leading-[1.08] tracking-[-0.005em] text-white max-w-[650px]">
