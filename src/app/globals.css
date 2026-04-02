@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+@plugin "tailwindcss-animate";
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
@@ -149,6 +149,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-nunito), sans-serif;
   }
   html {
     @apply font-sans;
@@ -180,4 +181,33 @@ html {
 
 .finger-tap {
   animation: fingerTap 2.2s ease-in-out infinite;
+}
+
+/* About section badge left-right float animation */
+@keyframes floatX {
+  0%   { transform: translate(-50%, -50%) translateX(0px); }
+  50%  { transform: translate(-50%, -50%) translateX(8px); }
+  100% { transform: translate(-50%, -50%) translateX(0px); }
+}
+
+.badge-float {
+  animation: floatX 3s ease-in-out infinite;
+}
+.badge-float-rev {
+  animation: floatX 3s ease-in-out infinite reverse;
+}
+.badge-float-slow {
+  animation: floatX 4s ease-in-out infinite;
+}
+.badge-float-slow-rev {
+  animation: floatX 4s ease-in-out infinite reverse;
+}
+.badge-float-fast {
+  animation: floatX 2.5s ease-in-out infinite;
+}
+.badge-float-fast-rev {
+  animation: floatX 2.5s ease-in-out infinite reverse;
+}
+.badge-float-med {
+  animation: floatX 3.5s ease-in-out infinite;
 }
