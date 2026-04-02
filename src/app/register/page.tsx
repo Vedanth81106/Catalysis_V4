@@ -4,7 +4,6 @@ import React, { useState } from "react";
 const TEAM_EVENTS = ["technoseek", "coding_relay"];
 const ALL_EVENTS = ["technoseek", "typemaster", "clash_royale", "coding_relay", "dsa_smackdown", "pitch_perfect"];
 
-// Interface for Member Data
 interface MemberData {
   name: string;
   usn: string;
@@ -45,10 +44,10 @@ export default function RegisterPage() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
-    
+
     const data = await res.json();
     setLoading(false);
-    
+
     alert(res.ok ? "Registration Successful!" : data.error);
     if(res.ok) window.location.reload();
   };
@@ -57,10 +56,10 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-black text-white p-6 md:p-10">
       <form onSubmit={handleSubmit} className="max-w-3xl mx-auto space-y-8 bg-gray-900 p-8 rounded-2xl">
         <h1 className="text-3xl font-bold border-b border-gray-800 pb-4 text-blue-500">Event Registration</h1>
-        
+
         <div className="space-y-2">
           <label className="text-sm text-gray-400">Choose your game</label>
-          <select className="w-full p-4 bg-gray-800 rounded-lg outline-none" 
+          <select className="w-full p-4 bg-gray-800 rounded-lg outline-none"
             onChange={(e) => setEvent(e.target.value)} required>
             <option value="">-- Select Event --</option>
             {ALL_EVENTS.map(ev => <option key={ev} value={ev}>{ev.toUpperCase().replace('_', ' ')}</option>)}
@@ -70,25 +69,25 @@ export default function RegisterPage() {
         {isTeamEvent && (
           <div className="space-y-2">
             <label className="text-sm text-gray-400">Team Name</label>
-            <input className="w-full p-4 bg-gray-800 rounded-lg" 
+            <input className="w-full p-4 bg-gray-800 rounded-lg"
               placeholder="Enter team name"
               onChange={(e) => setFormData({...formData, team_name: e.target.value})} required />
           </div>
         )}
 
-        <MemberInput title="Member 1 (Lead)" val={formData.member1} 
+        <MemberInput title="Member 1 (Lead)" val={formData.member1}
           set={(data: MemberData) => setFormData({...formData, member1: data})} />
 
         {isTeamEvent && (
           <>
-            <MemberInput title="Member 2" val={formData.member2} 
+            <MemberInput title="Member 2" val={formData.member2}
               set={(data: MemberData) => setFormData({...formData, member2: data})} />
             <MemberInput title="Member 3 (Optional)" val={formData.member3} required={false}
               set={(data: MemberData) => setFormData({...formData, member3: data})} />
           </>
         )}
 
-        <button className="w-full bg-blue-600 p-4 rounded-xl font-bold text-lg disabled:opacity-50" 
+        <button className="w-full bg-blue-600 p-4 rounded-xl font-bold text-lg disabled:opacity-50"
           disabled={loading || !event}>
           {loading ? "Registering..." : "Submit Registration"}
         </button>
@@ -97,7 +96,6 @@ export default function RegisterPage() {
   );
 }
 
-// Props interface for the component
 interface MemberInputProps {
   title: string;
   val: MemberData;

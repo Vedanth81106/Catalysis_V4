@@ -9,8 +9,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const images = [
-  "/gallery/1.jpg", "/gallery/2.jpg", "/gallery/3.jpg", 
-  "/gallery/4.jpg", "/gallery/5.jpg", "/gallery/6.jpg", 
+  "/gallery/1.jpg", "/gallery/2.jpg", "/gallery/3.jpg",
+  "/gallery/4.jpg", "/gallery/5.jpg", "/gallery/6.jpg",
   "/gallery/7.jpg", "/gallery/8.jpg", "/gallery/9.jpg",
   "/gallery/10.jpg", "/gallery/11.jpg"
 ];
@@ -20,17 +20,17 @@ export default function Gallery() {
     <section id="gallery" className="py-24 bg-[#FFEEF0]">
       <Container>
         <div className="rounded-[3rem] p-8 md:p-16 border-2 border-black bg-[#FAF7ED] shadow-sm relative overflow-hidden">
-          
+
           <div className="flex flex-col items-center text-center mb-12">
             <div className="inline-block border border-black rounded-full px-6 py-1 bg-white text-sm font-medium mb-8">
               GALLERY
             </div>
-            
+
             <div className="mb-6">
-              <Image 
-                src="/gallery-heading.png" 
-                alt="Moments from the Past" 
-                width={600} 
+              <Image
+                src="/gallery-heading.png"
+                alt="Moments from the Past"
+                width={600}
                 height={120}
                 className="object-contain w-auto h-auto"
               />
@@ -42,7 +42,7 @@ export default function Gallery() {
           </div>
 
           <div className="hidden md:grid grid-cols-12 auto-rows-[100px] gap-4">
-            
+
             <div className="col-span-2 row-span-3 relative rounded-[2rem] overflow-hidden border-2 border-black">
               <Image src="/gallery/1.jpg" alt="Past event" fill sizes="(min-width: 768px) 16vw, 100vw" className="object-cover" />
             </div>

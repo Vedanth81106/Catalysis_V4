@@ -3,10 +3,10 @@ import Image from "next/image";
 function RegisterCard() {
   return (
     <div className="relative w-[360px] h-[300px] bg-[#DD273E] border-[3px] border-black rounded-[3rem] flex flex-col items-center justify-center shadow-xl overflow-visible">
-      
-      <div className="absolute 
-        -top-12 sm:-top-16 md:-top-24 
-        left-1/2 -translate-x-1/2 
+
+      <div className="absolute
+        -top-12 sm:-top-16 md:-top-24
+        left-1/2 -translate-x-1/2
         z-50 pointer-events-none"
       >
         <Image
@@ -14,8 +14,8 @@ function RegisterCard() {
           alt="finger"
           width={180}
           height={180}
-          className="object-contain 
-            w-[110px] sm:w-[140px] md:w-[180px] 
+          className="object-contain
+            w-[110px] sm:w-[140px] md:w-[180px]
             h-auto"
         />
       </div>
@@ -64,7 +64,7 @@ function RegisterCard() {
 function EventHighlightsCard() {
   return (
     <div className="relative w-[246px] h-[250px] bg-white border-[3px] border-black rounded-[3rem] flex flex-col items-center pt-8 px-4 shadow-sm">
-      
+
       <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 z-10">
         <Image
           src="/hero/star.png"
@@ -118,7 +118,7 @@ function EventHighlightsCard() {
 function LeaderboardCard() {
   return (
     <div className="relative w-[246px] h-[250px] bg-[#FAF7ED] border-[3px] border-black rounded-[3rem] flex flex-col items-center pt-8 px-4 shadow-sm">
-      
+
       <div className="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14 z-10">
         <Image
           src="/hero/star.png"
@@ -162,26 +162,25 @@ export default function Hero() {
       className="relative min-h-screen w-full bg-[#FFEEF0] overflow-hidden flex flex-col items-center pt-12 pb-20"
     >
 
-      <div className="absolute 
-        -top-20 md:-top-25 
-        left-1/2 -translate-x-1/2 
-        w-[40px] sm:w-[60px] md:w-[84px] 
-        h-[520px] sm:h-[540px] md:h-[600px] 
-        bg-white 
+      <div className="absolute
+        -top-20 md:-top-25
+        left-1/2 -translate-x-1/2
+        w-[40px] sm:w-[60px] md:w-[84px]
+        h-[520px] sm:h-[540px] md:h-[600px]
+        bg-white
         z-0"
       />
 
       <div className="relative z-10 mt-4 md:mt-5 mb-3 md:mb-4">
-        <Image 
-          src="/hero/Pokeball.png" 
-          alt="pokeball" 
-          width={50}  
-          height={50} 
+        <Image
+          src="/hero/Pokeball.png"
+          alt="pokeball"
+          width={50}
+          height={50}
           className="drop-shadow-md md:w-[80px] md:h-[80px]"
         />
       </div>
 
-  
       <div className="relative z-10 text-center px-4 max-w-5xl">
 
         <div className="hidden md:block">
@@ -206,10 +205,10 @@ export default function Hero() {
           />
         </div>
 
-        <p className="mt-4 md:mt-6 text-[#3b0a1e] font-medium 
-          max-w-[80%] sm:max-w-md md:max-w-3xl 
-          mx-auto 
-          text-[13px] sm:text-sm md:text-lg 
+        <p className="mt-4 md:mt-6 text-[#3b0a1e] font-medium
+          max-w-[80%] sm:max-w-md md:max-w-3xl
+          mx-auto
+          text-[13px] sm:text-sm md:text-lg
           leading-relaxed md:leading-relaxed"
         >
           Join us for three electrifying days of hackathons, design battles, workshops, and competitions — all under one roof. Catalysis is where thinkers, creators, and innovators come to transform ideas into impact.

@@ -1,6 +1,16 @@
 import Image from "next/image";
 import Container from "@/components/common/Container";
 
+const FLOAT_CLASSES = [
+  "badge-float",
+  "badge-float-alt",
+  "badge-float-s2",
+  "badge-float-s3",
+  "badge-float-s4",
+  "badge-float-s5",
+  "badge-float-s6",
+];
+
 function AboutMobile() {
   const MOBILE_BADGES = [
     { src: "/about/pitch.png", top: "5%", left: "46%" },
@@ -28,7 +38,7 @@ function AboutMobile() {
       {MOBILE_BADGES.map((badge, i) => (
         <div
           key={i}
-          className="absolute z-30"
+          className={`absolute z-30 ${FLOAT_CLASSES[i % FLOAT_CLASSES.length]}`}
           style={{
             top: badge.top,
             left: badge.left,
@@ -123,7 +133,16 @@ function AboutRight() {
         {BADGES.map((badge, i) => (
           <div
             key={i}
-            className="absolute z-20 transition-transform hover:scale-105"
+            className={`absolute z-20 hover:scale-105 transition-transform ${
+              i % 2 === 0 ? "badge-float-d" : "badge-float-d-alt"
+            } ${
+              i === 0 ? "" :
+              i === 1 ? "badge-float-d-s2" :
+              i === 2 ? "badge-float-d-s3" :
+              i === 3 ? "badge-float-d-s4" :
+              i === 4 ? "badge-float-d-s5" :
+                        "badge-float-d-s6"
+            }`}
             style={{
               top: badge.top,
               left: badge.left,

@@ -132,7 +132,7 @@ export default function Timeline() {
             />
           </div>
 
-          {/* Mobile/Tablet: Day tabs + single column */}
+          {}
           <div className="lg:hidden">
             <div className="flex gap-3 mb-6">
               {dayLabels.map((label, i) => (
@@ -196,7 +196,7 @@ export default function Timeline() {
             </div>
           </div>
 
-          {/* Desktop: Full 3-column grid with time labels */}
+          {}
           <div className="hidden lg:flex gap-6">
             <div className="flex flex-col justify-between text-sm text-gray-600 pr-2">
               {[

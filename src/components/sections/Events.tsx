@@ -9,7 +9,6 @@ export default function Events() {
       <Container>
         <div className="grid md:grid-cols-2 gap-10 items-center">
 
-
           <div>
             <SectionHeader
               label="Events"
@@ -22,9 +21,7 @@ export default function Events() {
             </Button>
           </div>
 
-
           <div className="flex gap-6 justify-center items-center">
-
 
             <div className="relative">
               <Image
@@ -36,7 +33,6 @@ export default function Events() {
               />
             </div>
 
-       
             <div className="relative mt-6">
               <Image
                 src="/event-card-2.png"
